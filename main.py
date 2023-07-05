@@ -76,10 +76,10 @@ def play():
             response = requests.post(host + '/ask', headers=headers, json=data)
             st.info('get response')
             st.info(response.text)
-            try:
+            #try:
                 #response = Response.model_validate(response.text)
-                response.result=response.text['result']
-                st.markdown(f'Answer: **{response.result.strip()}**')
+                #response.result=response.text['result']
+                #st.markdown(f'Answer: **{response.result.strip()}**')
                 #with st.expander('Show stdout'):
                     #st.write(response.json())
             except Exception as e:
