@@ -1,4 +1,3 @@
-sys
 requests
 streamlit
 pydantic
