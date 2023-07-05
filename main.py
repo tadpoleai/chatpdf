@@ -76,7 +76,7 @@ def play():
             response = requests.post(host + '/ask', headers=headers, json=data)
             print(response.text)
             try:
-                response = Response.model_validate(response.text)
+                response = Response.model_validate_json(response.text)
                 st.markdown(f'Answer: **{response.result.strip()}**')
                 with st.expander('Show stdout'):
                     st.write(response.json())
