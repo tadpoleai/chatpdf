@@ -74,6 +74,7 @@ def play():
         }
         with st.spinner(text="Asking chain..."):
             response = requests.post(host + '/ask', headers=headers, json=data)
+            st.info('get response')
             st.info(response.text)
             try:
                 response = Response.model_validate(response.text)
