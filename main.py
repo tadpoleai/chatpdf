@@ -77,10 +77,11 @@ def play():
             st.info('get response')
             st.info(response.text)
             try:
-                response = Response.model_validate(response.text)
+                #response = Response.model_validate(response.text)
+                response.result=response.text['result']
                 st.markdown(f'Answer: **{response.result.strip()}**')
-                with st.expander('Show stdout'):
-                    st.write(response.json())
+                #with st.expander('Show stdout'):
+                    #st.write(response.json())
             except Exception as e:
                 st.error(e)
                 return
