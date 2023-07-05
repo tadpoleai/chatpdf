@@ -74,9 +74,9 @@ def play():
         }
         with st.spinner(text="Asking chain..."):
             response = requests.post(host + '/ask', headers=headers, json=data)
-            print(response.text)
+            st.info(response.text)
             try:
-                response = Response.model_validate_json(response.text)
+                response = Response.model_validate(response.text)
                 st.markdown(f'Answer: **{response.result.strip()}**')
                 with st.expander('Show stdout'):
                     st.write(response.json())
