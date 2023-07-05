@@ -35,14 +35,14 @@ host = st.text_input(
 
 urls = st.text_area(
     'Type your urls (separated by comma)',
-    value='https://github.com/tadpoleai/SAPdocs/blob/main/SAPFICO01.pdf',
-    placeholder='https://github.com/tadpoleai/SAPdocs/blob/main/SAPFICO01.pdf',
+    value='https://arxiv.org/pdf/2306.16092v1.pdf',
+    placeholder='https://arxiv.org/pdf/2306.16092v1.pdf',
 )
 
 question = st.text_input(
     'Type your question',
-    value='凭证编制过账的步骤是什么?',
-    placeholder='凭证编制过账的步骤是什么?',
+    value='export what is chatlaw, explain with english',
+    placeholder='export what is chatlaw, explain with english',
 )
 
 submit = st.button('Submit')
