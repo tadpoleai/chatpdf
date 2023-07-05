@@ -25,12 +25,12 @@ st.set_page_config(
 
 st.sidebar.markdown('## OpenAI Token')
 openai_token = st.sidebar.text_input(
-    'Enter your OpenAI token:', placeholder='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', type='password'
+    'Enter your OpenAI token:', value='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', type='password'
 )
 
 host = st.text_input(
     'Enter the lc-serve host to connect to',
-    placeholder='https://pdfqna-1bab3f3291.wolf.jina.ai',
+    value='https://pdfqna-1bab3f3291.wolf.jina.ai',
 )
 
 urls = st.text_area(
