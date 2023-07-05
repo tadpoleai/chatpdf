@@ -25,7 +25,7 @@ st.set_page_config(
 
 st.sidebar.markdown('## OpenAI Token')
 openai_token = st.sidebar.text_input(
-    'Enter your OpenAI token:', value='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', type='password'
+    'Enter your OpenAI token:', value='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', type='password'
 )
 
 host = st.text_input(
@@ -77,7 +77,7 @@ def play():
             st.info('get response')
             st.info(response.text)
             try:
-                response = Response.model_validate(response.text)
+                response = Response.model_validate_json(response.text)
                 st.markdown(f'Answer: **{response.result.strip()}**')
                 with st.expander('Show stdout'):
                     st.write(response.json())
