@@ -25,7 +25,7 @@ st.set_page_config(
 
 st.sidebar.markdown('## OpenAI Token')
 openai_token = st.sidebar.text_input(
-    'Enter your OpenAI token:', placeholder='sk-...', type='password'
+    'Enter your OpenAI token:', placeholder='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', type='password'
 )
 
 host = st.text_input(
@@ -35,14 +35,14 @@ host = st.text_input(
 
 urls = st.text_area(
     'Type your urls (separated by comma)',
-    value='https://uiic.co.in/sites/default/files/uploads/downloadcenter/Arogya%20Sanjeevani%20Policy%20CIS_2.pdf',
-    placeholder='https://uiic.co.in/sites/default/files/uploads/downloadcenter/Arogya%20Sanjeevani%20Policy%20CIS_2.pdf',
+    value='https://github.com/tadpoleai/SAPdocs/blob/main/SAPFICO01.pdf',
+    placeholder='https://github.com/tadpoleai/SAPdocs/blob/main/SAPFICO01.pdf',
 )
 
 question = st.text_input(
     'Type your question',
-    value='Kya iss scheme mai koi waiting period hai?',
-    placeholder='Kya iss scheme mai koi waiting period hai?',
+    value='凭证编制过账的步骤是什么?',
+    placeholder='凭证编制过账的步骤是什么?',
 )
 
 submit = st.button('Submit')
