@@ -74,6 +74,7 @@ def play():
         }
         with st.spinner(text="Asking chain..."):
             response = requests.post(host + '/ask', headers=headers, json=data)
+            print(response.text)
             try:
                 response = Response.parse_raw(response.text)
                 st.markdown(f'Answer: **{response.result.strip()}**')
